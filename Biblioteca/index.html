@@ -8,15 +8,40 @@
 </head>
 <body>
     <h1>Minha Biblioteca</h1>
+
+    <form action="#" id="formulario">
+        <h2>BiblioLura</h2>
+
+        <label for="titulo">Título do livro</label>
+        <input id="titulo" placeholder="Digite o nome do livro" required type="text" />
+
+        <label for="capa_livro">Capa do livro</label>
+        <input id="capa_livro" placeholder="Cole o link da imagem da capa do livro" required type="url" />
+
+        <label for="qtd_paginas">Quantidade de páginas</label>
+        <input id="qtd_paginas" placeholder="Digite quantidade de páginas do livro" required type="number" />
+
+        <label for="valor">Valor</label>
+        <input id="valor" placeholder="Digite o valor de custo do livro (R$)" required type="number" />
+
+        <label for="status">Status de leitura</label>
+        <select id="status">
+            <option value="sim">Lido</option>
+            <option value="nao">Não lido</option>
+        </select>
+
+        <input type="button" value="Adicionar livro">
+    </form>
+
     <script>
-        let tituloLivro = window.prompt("Qual o título do livro?");
-        document.write(tituloLivro); 
+        // let tituloLivro = window.prompt("Qual o título do livro?");
+        // document.write(tituloLivro); 
 
-        let quantidadePaginas = window.prompt("Quantas páginas tem o livro?");
-        document.write(quantidadePaginas);
+        // let quantidadePaginas = window.prompt("Quantas páginas tem o livro?");
+        // document.write(quantidadePaginas);
 
-        let statusLeitura = window.confirm("Você já leu o livro?");
-        document.write(statusLeitura);
+        // let statusLeitura = window.confirm("Você já leu o livro?");
+        // document.write(statusLeitura);
     </script>
 </body>
 </html>
