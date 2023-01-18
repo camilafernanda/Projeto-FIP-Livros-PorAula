@@ -21,8 +21,8 @@
         <label for="qtd_paginas">Quantidade de páginas</label>
         <input id="qtd_paginas" placeholder="Digite quantidade de páginas do livro" required type="number" />
 
-        <label for="valor">Valor</label>
-        <input id="valor" placeholder="Digite o valor de custo do livro (R$)" required type="number" />
+        <label for="meta_max">Meta de leitura</label>
+        <input id="meta_max" placeholder="Digite o valor máximo de páginas para leitura diária" required type="number" />
 
         <label for="status">Status de leitura</label>
         <select id="status">
@@ -30,18 +30,17 @@
             <option value="nao">Não lido</option>
         </select>
 
-        <input type="button" value="Adicionar livro">
+        <input type="button" value="Adicionar livro" onclick="adicionaLivro()">
     </form>
 
     <script>
-        // let tituloLivro = window.prompt("Qual o título do livro?");
-        // document.write(tituloLivro); 
-
-        // let quantidadePaginas = window.prompt("Quantas páginas tem o livro?");
-        // document.write(quantidadePaginas);
-
-        // let statusLeitura = window.confirm("Você já leu o livro?");
-        // document.write(statusLeitura);
+        function adicionaLivro(){
+            let tituloLivro = document.querySelector('#titulo');
+            let capaLivro = document.querySelector('#capa_livro');
+            let statusLeitura = document.querySelector('#status');
+            let qtdPaginas = document.querySelector('#qtd_paginas');
+            let maxMeta = document.querySelector('#meta_max');
+        }
     </script>
 </body>
 </html>
