@@ -33,6 +33,22 @@
         <input type="button" value="Adicionar livro" onclick="adicionaLivro()">
     </form>
 
+    <h2>Resumo</h2>
+    <table>
+        <tr>
+            <td>Quantidade de páginas lidas</td>
+            <td id="paginas_lidas"></td>
+        </tr>
+        <tr>
+            <td>Quantidade de páginas a serem lidas</td>
+            <td id="paginas_desejadas"></td>
+        </tr>
+        <tr>
+            <td>Porcentagem de conclusão de leitura</td>
+            <td id="porcentagem_conclusao"></td>
+        </tr>
+    </table>
+
     <script>
         function adicionaLivro(){
             let tituloLivro = document.querySelector('#titulo');
