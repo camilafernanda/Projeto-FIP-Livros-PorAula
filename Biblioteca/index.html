@@ -61,9 +61,11 @@
             let maxMeta = document.querySelector('#meta_max');
 
             if (statusLeitura.value == 'sim') {
-                document.write("Páginas lidas: " + qtdPaginas.value);
+                let elementoPaginasLidas = document.querySelector('#paginas_lidas');
+                elementoPaginasLidas.textContent = qtdPaginas.value + " páginas";
             } else {
-                document.write("Páginas a serem lidas: " + qtdPaginas.value);
+                let elementoPaginasNaoLidas = document.querySelector('#paginas_desejadas');
+                elementoPaginasNaoLidas.textContent = qtdPaginas.value + " páginas";
             }
         }
     </script>
