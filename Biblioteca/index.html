@@ -53,6 +53,10 @@
     </table>
 
     <script>
+        let paginasLidas = 0;
+        let paginasNaoLidas = 0;
+        let valorTotalPaginas;
+
         function adicionaLivro() {
             let tituloLivro = document.querySelector('#titulo');
             let capaLivro = document.querySelector('#capa_livro');
@@ -61,12 +65,16 @@
             let maxMeta = document.querySelector('#meta_max');
 
             if (statusLeitura.value == 'sim') {
+                paginasLidas = qtdPaginas.value;
                 let elementoPaginasLidas = document.querySelector('#paginas_lidas');
                 elementoPaginasLidas.textContent = qtdPaginas.value + " páginas";
             } else {
+                paginasNaoLidas = qtdPaginas.value;
                 let elementoPaginasNaoLidas = document.querySelector('#paginas_desejadas');
                 elementoPaginasNaoLidas.textContent = qtdPaginas.value + " páginas";
             }
+            valorTotalPaginas = paginasLidas + paginasNaoLidas;
+            console.log(valorTotalPaginas);
         }
     </script>
 </body>
