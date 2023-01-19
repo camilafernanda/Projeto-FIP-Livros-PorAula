@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteca</title>
 </head>
+
 <body>
     <h1>Minha Biblioteca</h1>
 
@@ -22,7 +24,8 @@
         <input id="qtd_paginas" placeholder="Digite quantidade de páginas do livro" required type="number" />
 
         <label for="meta_max">Meta de leitura</label>
-        <input id="meta_max" placeholder="Digite o valor máximo de páginas para leitura diária" required type="number" />
+        <input id="meta_max" placeholder="Digite o valor máximo de páginas para leitura diária" required
+            type="number" />
 
         <label for="status">Status de leitura</label>
         <select id="status">
@@ -50,17 +53,20 @@
     </table>
 
     <script>
-        function adicionaLivro(){
+        function adicionaLivro() {
             let tituloLivro = document.querySelector('#titulo');
             let capaLivro = document.querySelector('#capa_livro');
             let statusLeitura = document.querySelector('#status');
             let qtdPaginas = document.querySelector('#qtd_paginas');
             let maxMeta = document.querySelector('#meta_max');
 
-            let elementoPaginasLidas = document.querySelector('#paginas_lidas');
-            elementoPaginasLidas.textContent = qtdPaginas.value + " páginas";
-
+            if (statusLeitura.value == 'sim') {
+                document.write("Páginas lidas: " + qtdPaginas.value);
+            } else {
+                document.write("Páginas a serem lidas: " + qtdPaginas.value);
+            }
         }
     </script>
 </body>
+
 </html>
