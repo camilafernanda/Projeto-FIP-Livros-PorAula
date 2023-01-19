@@ -74,7 +74,12 @@
                 elementoPaginasNaoLidas.textContent = qtdPaginas.value + " páginas";
             }
             valorTotalPaginas = paginasLidas + paginasNaoLidas;
-            console.log(valorTotalPaginas);
+            
+            let percentConclusao;
+            percentConclusao = (paginasLidas / valorTotalPaginas)*100;
+
+            let elementoPercentConclusao = document.querySelector('#porcentagem_conclusao');
+            elementoPercentConclusao.textContent = percentConclusao + '%';
         }
     </script>
 </body>
